@@ -75,14 +75,23 @@
       changeTitle();
 
       function changeUpperCase() {
-        let text = document.querySelector("p")
+        let text = document.querySelector("p");
         text.innerText = text.innerText.toUpperCase();
-        console.log (text)
       }
       changeUpperCase();
 
-     
+      function showParagraph() {
+        let textParagraph = document.querySelector(".center-content").children;
+        let text = "";
 
+        for (let index = 0; index < textParagraph.length; index += 1) {
+          text += textParagraph[index].innerText + " ";
+        }
+
+        let footerParagraph = document.querySelector("footer").firstElementChild;
+        footerParagraph.innerText = text;
+      }
+      showParagraph();
 
       // Iniciando pullrequest
     </script>
